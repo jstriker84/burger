@@ -1,4 +1,6 @@
-
+ul{
+	list-style-type: square;
+}
 li {
   background: #FAEBD7;
   margin: 5px;
