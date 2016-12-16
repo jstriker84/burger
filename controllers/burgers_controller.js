@@ -21,10 +21,11 @@ router.get("/burger", function(req, res) {
 
 router.post("/burgers/create", function(req, res) {
 	burger.create([
-		"", ""
+		"burger_name"
 		], [
-		req.body.], function() {
-			res.redirect("/burgers");
+		req.body.burger_name
+		], function() {
+			res.redirect("/burger");
 		});
 });
 
@@ -37,7 +38,7 @@ router.put("/burgers/update/:id", function(req, res) {
 		devoured: req.body.devoured
 	}, condition, function() {
 
-		res.redirect("/burgers");
+		res.redirect("/burger");
 	});
 });
 
